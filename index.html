@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>ENROUT</title>
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../cdn-cgi/apps/head/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script>
+    <link rel="icon" href="images/enrout_logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700%7CZilla+Slab:300,400,500,700,700i%7CGloria+Hallelujah">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.css" integrity="sha256-831vUCpalhrFw/F8jVhoX/aw3A9pwtzdN5zKvJbsO/I=" crossorigin="anonymous" /> -->
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.2.95/css/materialdesignicons.css" integrity="sha256-CpEvm59aOLC1OaEd/FS7s/B7hfTtrR8tBTlDA22lzmA=" crossorigin="anonymous" /> -->
+  </head>
+  <body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" id="exampleModalLabel"><b style="color: #0CCED1; text-transform: uppercase">Sign Up To Become A Delivery Partner</b></h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- this is the form from the modal-->
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1" style="color: #0CCED1;">Full Name</label>
+                <input type="text" class="form-control" name="fullName" aria-describedby="nameHelp">
+                <small id="namelHelp" class="form-text text-muted">Please enter your name.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1" style="color: #0CCED1;">Email</label>
+                <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+                <small id="namelHelp" class="form-text text-muted">Please enter your email.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputText" style="color: #0CCED1;" >Phone Number</label>
+                <input type="text" class="form-control" name="telephone" id="exampleInputPassword1">
+                <small id="namelHelp" class="form-text text-muted">Please enter your Phone Number.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1" style="color: #0CCED1;">Momo Number</label>
+                <input type="email" class="form-control" name="momoNumber" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="namelHelp" class="form-text text-muted">Please enter your active momo number.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" style="color: #0CCED1;">Licence Number</label>
+                <input type="text" class="form-control" name="licenceNumber" id="exampleInputPassword1">
+                <small id="namelHelp" class="form-text text-muted">Please enter your Licence Number.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1" style="color: #0CCED1;">Address</label>
+                <input type="text" class="form-control" name="streetAddress" id="exampleInputPassword1">
+                <small id="namelHelp" class="form-text text-muted">Please enter your location address.</small>
+              </div>
+              <div class="form-group">
+                <label for="cars" style="color:#0CCED1">Gender</label>
+                <select class="browser-default custom-select" name="gender" id="Male">
+                    <option value="transgender">Transgender</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                  </ul>
+                </select>
+                <small id="namelHelp" class="form-text text-muted">Please select your gender.</small>
+              </div>
+              <div class="form-group">
+                <label for="Date" style="color: #0CCED1;" >Date of Birth</label><br>
+                <input class="browser-default custom-select"  type="date" id="birthday" name="dateOfBirth">
+              </div>
+              <small id="namelHelp" class="form-text text-muted">Please enter your date of birth.</small>
+              <div class="form-group">
+
+              <div class="image-upload-wrap mt-4">
+                <label for="image" style="color: #0CCED1;" >Cartography Image</label><br>
+                <input class="file-upload-input" name="cartography" type="file" onchange="readURL(this);" accept="image/*">
+              </div>
+              <small id="namelHelp" class="form-text text-muted">Please upload your Cartography image.</small>
+              </div>
+              <br>
+              <div class="image-upload-wrap ">
+                <label for="image" style="color: #0CCED1;">Profile Image</label><br>
+                <input class="file-upload-input" name="profileImg" type="file" onchange="readURL(this);" accept="image/*">
+              </div>
+              <small id="namelHelp" class="form-text text-muted">Please upload your profile photo.</small>
+              <br>
+              <div class="container">
+                <h6>
+                  <p style="font-family: Arial, Helvetica, sans-serif; color: #0CCED1; text-align: center;">Please provide details of guarantor</p>
+                </h6>
+              </div>
+              <hr>
+              <br>
+              <div class="form-group">
+                <label for="exampleInputEmail1" style="color: #0CCED1;">Guarantor Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="guarantorName" aria-describedby="emailHelp">
+                <small id="namelHelp" class="form-text text-muted">Please enter your guarantor's name.</small>
+              </div>
+              <div class="image-upload-wrap ">
+                <label for="image" style="color: #0CCED1;" >Guarantor's ID Image</label><br>
+                <input class="file-upload-input" name="guarantorId" type="file" onchange="readURL(this);" accept="image/*">
+              </div>
+              <small id="namelHelp" class="form-text text-muted">Please upload your guarantor's photo.</small>
+
+              <br><br>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+      <div class="preloader">
+        <div class="preloader-logo"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/enrout_logo.png" alt="" width="159" height="59"/><img class="brand-logo-light" src="images/logo-inverse-159x59.png" alt="" width="159" height="59"/></a>
+        </div>
+      </div>
+      <div class="page">
+        <!-- Page Header-->
+        <header class="page-header">
+          <!-- RD Navbar-->
+          <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-body-class="rd-navbar-modern-linked" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+              <div class="rd-navbar-main-outer">
+                <div class="rd-navbar-main">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav		-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+
+                      <li style="font-weight: 400;" class="rd-nav-item"><a class="rd-nav-lina class="rd-nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Become A Delivery Partner</a>
+                      </li>
+
+                      <li  class="rd-nav-item"><a class="rd-nav-link" href="faq.html">Faq</a></li>
+
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contact Us</a>
+                      </li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="rd-navbar-aside-outer">
+                <div class="rd-navbar-aside">
+                  <!-- RD Navbar Panel-->
+                  <div class="rd-navbar-panel">
+                    <!-- RD Navbar Toggle-->
+                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                    <!-- RD Navbar Brand-->
+                    <div class="rd-navbar-brand"><a class="brand" ><img src="images/enrout_logo.png" alt="" width="59" height="59"/> <span style="color: black; font-size: 25px; font-weight: normal">ENROUT</span></a>
+                    </div>
+                  </div>
+                  <div class="rd-navbar-collapse">
+                    <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse-content"><span></span></button>
+                    <div class="rd-navbar-collapse-content">
+                      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                      <div class="elfsight-app-deaeb4ee-f5f0-43c4-b855-016b4797eba9"></div>
+                      <div class="link-icon-title"><a class="link-icon-1" ><i class="fa fa-whatsapp" aria-hidden="true"></i><span>+233 244005656</span></a>
+                        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                        <div class="link-icon-title elfsight-app-deaeb4ee-f5f0-43c4-b855-016b4797eba9"></div>
+                      </div>
+                      <div><a class="link-icon-1"><i class="fa fa-envelope" aria-hidden="true"></i><span><span class="__cf_email__">deliveryenrout@gmail.com</span></span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <!-- FScreen-->
+        <section class="section parallax-container section-xl bg-gray-900" data-parallax-img="images/landing/Header-img-1.png">
+          <div class="parallax-content">
+            <div class="container">
+              <div class="product-creative-main text-center">
+                <p class="heading-1 product-creative-title" style="font-size:80px;">Dont Compromise Your Comfort</p>
+                <div class="product-creative-text">
+                  <p class="heading-5 text-white"> We guarantee every package delivered by ENROUT is received with a smile</p>
+                </div>
+                <div class="buttons" style="margin-top:100px;">
+                  <center class="icon">
+                      <a href="https://play.google.com/store/apps/details?id=com.delivery.enroute&hl=en"><img src="./images/android.png" style="width: 200px;"  alt=""></a>
+                      <a href="https://apps.apple.com/gh/app/enrout-delivery/id1489040913"><img src="./images/appstore.png" style="width: 200px; border-radius: 10px; height: 66px;" alt=""></a>
+                  </center>
+              </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Counters-->
+        <section class="section section-md bg-default">
+          <div class="container">
+            <div class="row row-50">
+              <div class="col-4 col-md-4 wow fadeIn">
+                <!-- Counter Modern-->
+                <article class="counter-modern">
+                  <div class="icon counter-modern-icon mdi mdi-car"></div>
+                  <div class="counter-modern-main"><span></span>1<span></span></div>
+                  <h4 class="font-weight-regular counter-modern-title">Fleets</h4>
+                </article>
+              </div>
+              <div class="col-4 col-md-4 wow fadeIn" data-wow-delay=".2s">
+                <!-- Counter Modern-->
+                <article class="counter-modern">
+                  <div class="icon counter-modern-icon mdi mdi-account"></div>
+                  <div class="counter-modern-main">
+                    <div class="counter">10</div>
+                  </div>
+                  <h4 class="font-weight-regular counter-modern-title">Delivery Partners</h4>
+                </article>
+              </div>
+
+              <div class="col-4 col-md-4 wow fadeIn" data-wow-delay=".2s">
+                <!-- Counter Modern-->
+                <article class="counter-modern">
+                  <div class="icon counter-modern-icon mdi mdi-flag-variant"></div>
+                  <div class="counter-modern-main">
+                    <div class="counter">0</div><span></span>
+                  </div>
+                  <h4 class="font-weight-regular counter-modern-title">Customers</h4>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Taxi Service App-->
+        <section class="section section-lg bg-gray-100 bg-image bg-image-1" style="background-image: url(images/landing/Fon-img.png);">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-9 col-md-8 col-lg-7 col-xl-6">
+                <h2 class="wow fadeIn" style="color: #0CCED1">ENROUT</h2>
+                <p class="heading-5 wow fadeIn" data-wow-delay=".2s">ENROUT gives you real time access to myriads of delivery partners in less than 2 minutes of request. Download our mobile app to have your items delivered in record timing. </p>
+                <p class="wow fadeIn" data-wow-delay=".4s">Our app is available for Android and iOS.
+
+                    Experience ENROUT now.
+                </p>
+                <a class="button button-lg button-primary button-raven wow fadeIn" data-wow-delay=".6s" href="#">Download Now</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Testimonials-->
+
+
+        <!-- side by side image and text-->
+        <section>
+          <div class="jumbotron">
+            <div class="row" style="min-height: 60vh; margin-top: 0px;">
+              <div class="col-md-6">
+                <img src="./images/Service-1.png" class="image-responsive image-resize" alt="Enrout Delivery Partner">
+              </div>
+              <div class="col-md-6">
+                  <h2 class="wow fadeIn" style="color: #0CCED1;">MAKE MORE MONEY WITH YOUR VEHICLE</h2>
+                  <p>
+                   <ul class="container signup-list" style="list-style: none; margin-top: 60px; font-family: 'Roboto', sans-serif; " class="list-group">
+                    <li><h5>Receive Order</h5></li>
+                    <li><h5>Deliver Item</h5></li>
+                    <li><h5>Receive Payment</h5></li>
+                   </ul>
+                    <!--
+                      <h2 class="wow fadeIn" style="color: #0CCED1;">ENROUT DELIVERY PARTNER</h2>
+                    <p>
+                    Do you have a motorcycle? <br>
+                    Do you have a pickup truck?<br>
+                    Do you have a van?<br>
+                    <br><br>
+                    -->
+                  <div class="container" type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding-top: 0px;">
+                    <button class="btn btn-primary a class="rd-nav-lina class="rd-nav-link" data-toggle="modal" data-target="#exampleModal" href="#"">Sign up now</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--end of side by side image and text-->
+        <!-- Our Advantages-->
+        <section class="section section-lg text-center bg-gray-950">
+          <div class="container">
+            <h2 class="wow fadeIn">Our Advantages</h2>
+            <div class="row row-50 justify-content-center">
+              <div class="col-sm-12 col-lg-4 col-xl-4 wow fadeIn" data-wow-delay=".2s">
+                <!-- Box Classic-->
+                <article class="box-classic"><a class="icon box-classic-icon fl-bigmug-line-map87" href="single-service.html"></a><a class="box-classic-main" href="single-service.html">
+                    <h4 class="box-classic-title">Cashless Payment</h4>
+                    <div class="box-classic-inner">
+                      <p>This will increase transparency
+                          and accountability creating an improved way of tracking your records.</p>
+                    </div></a></article>
+              </div>
+              <div class="col-sm-12 col-lg-4 col-xl-4 wow fadeIn" data-wow-delay=".3s">
+                <!-- Box Classic-->
+                <article class="box-classic"><a class="icon box-classic-icon fl-bigmug-line-planetary2" href="single-service.html"></a><a class="box-classic-main" href="single-service.html">
+                    <h4 class="box-classic-title">Reduced costs</h4>
+                    <div class="box-classic-inner">
+                      <p>By sharing our true cost, you get a clearer understanding of the real market value.</p>
+                    </div></a></article>
+              </div>
+              <div class="col-sm-12col-lg-4 col-xl-4 wow fadeIn" data-wow-delay=".4s">
+                <!-- Box Classic-->
+                <article class="box-classic"><a class="icon box-classic-icon fl-bigmug-line-portfolio23" href="single-service.html"></a><a class="box-classic-main" href="single-service.html">
+                    <h4 class="box-classic-title">Convenience</h4>
+                    <div class="box-classic-inner">
+                      <p>Don’t compromise your comfort zone.</p>
+                    </div></a></article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Blog-->
+
+        <!-- Newsletter-->
+        <section class="section section-lg bg-gray-900 bg-image bg-image-2" style="background-image: url(images/landing/Header-img.png);">
+          <div class="container">
+            <div class="row justify-content-center text-center">
+              <div class="col-sm-11 col-md-8 col-lg-7 col-xl-6">
+                <h2 class="wow fadeIn">Newsletter</h2>
+                <h5 class="wow fadeIn" data-wow-delay=".2s">Keep up with our weekly news, updates, and publications. Enter your e-mail and subscribe to our newsletter.</h5>
+                <form class="rd-form rd-mailform form-inline wow fadeIn" data-wow-delay=".4s" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="#">
+                  <div class="form-wrap">
+                    <input class="form-input" id="subscribe-form-email" type="email" name="email" data-constraints="@Email @Required">
+                    <label class="form-label" for="subscribe-form-email">E-mail</label>
+                  </div>
+                  <div class="form-button">
+                    <button class="button button-lg button-primary button-raven" type="submit">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Offices-->
+        <section class="section section-lg bg-gray-100">
+          <div class="container">
+            <h2 class="wow fadeIn text-center">Our Office</h2>
+            <div class="row row-30">
+              <div class="col-12 wow fadeIn">
+
+                <!-- Post 1-->
+                <article class="post-1">
+                  <h4 class="font-weight-regular post-1-location" style="color: #0CCED1">Accra</h4><a class="post-1-address" href="index.html#"> No 10 Commercial Street Same Premises as GCB
+                      Accra.</a>
+                  <dl class="post-1-terms-list">
+                    <dt>tel.</dt>
+                    <dd><a href="tel:#">0302-631-487</a></dd>
+                  </dl>
+                </article>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- Google Map-->
+        <section class="section">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5195164639795!2d-0.15021788555223098!3d5.637693734390756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf84ad23ffa33d%3A0x5a446db249e5e8f1!2sQueen&#39;s%20International%20School!5e0!3m2!1sen!2sgh!4v1600782080246!5m2!1sen!2sgh" width="1348" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+        <!-- Page Footer-->
+        <footer class="section footer-modern bg-gray-950">
+
+          <div class="footer-modern-main">
+            <div class="container">
+              <div class="row row-50 justify-content-center justify-content-lg-between">
+
+                  <div class="col-md-6 col-lg-6">
+                      <!-- RD Twitter Feed-->
+
+                      <a class="twitter-timeline" data-height="500" data-theme="dark" href="https://twitter.com/Enroutgh?ref_src=twsrc%5Etfw">Tweets by Enroutgh</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                    </div>
+
+                <div class="col-lg-5">
+                  <h4 class="font-weight-regular footer-modern-title">Get in Touch</h4>
+                  <!-- RD Mailform-->
+                  <form class="rd-form form-sm rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="MAILTO: kwesiboateng436@gmail.com">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-form-name-3" type="text" name="name" data-constraints="@Required">
+                      <label class="form-label" for="contact-form-name-3">Your name</label>
+                    </div>
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-form-email-3" type="email" name="email" data-constraints="@Email @Required">
+                      <label class="form-label" for="contact-form-email-3">E-mail</label>
+                    </div>
+                    <div class="form-wrap">
+                      <label class="form-label" for="contact-form-message-3">Message</label>
+                      <textarea class="form-input" id="contact-form-message-3" name="message" data-constraints="@Required"></textarea>
+                    </div>
+                    <div class="form-wrap">
+                      <button class="button button-primary button-raven" type="submit">Send</button>
+                    </div>
+                  </form>
+                </div>
+
+
+
+              </div>
+
+            </div>
+          </div>
+          <div class="footer-modern-aside">
+            <div class="container">
+              <div class="layout-2">
+                <!-- Rights-->
+                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><br class="d-sm-none"/><a href="index.html#">Terms of Use</a><span> and</span><span>&nbsp;</span><a href="privacy.html">Privacy Policy</a><span>.</span></p>
+                <div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="snackbars" id="form-output-global"></div>
+      <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/core.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.js" integrity="sha256-FYpdV7ChCZtW4xZWtO5QNyY5ynaAm843CE8jjyJzCAw=" crossorigin="anonymous"></script>
+
+    <!--LIVEDEMO_00 -->
+
+    <script>
+
+      var playStoreLink = document.getElementById("playStoreLink")
+      var appStoreLink = document.getElementById("appStoreLink")
+
+      playStoreLink.addEventListener('click', function(e) {
+
+        e.preventDefault()
+
+        location.replace('http://bit.ly/enrout_app')
+      }, false)
+
+      appStoreLink.addEventListener('click', function(e) {
+
+        e.preventDefault()
+
+        location.replace('http://bit.ly/enrout_app')
+      }, false)
+    </script>
+
+
+  </body>
+</html>
